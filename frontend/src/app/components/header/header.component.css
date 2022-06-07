@@ -1,0 +1,16 @@
+.header {
+    padding:5px 20px;
+    background-color: var(--clr-main-brand);
+}
+
+.title {
+    color: var(--clr-light-shades);
+    text-decoration: none;
+}
+
+.login, .register {
+    float: right;
+    text-decoration: none;
+    padding-top: 10px;
+    color: var(--clr-light-shades);
+}

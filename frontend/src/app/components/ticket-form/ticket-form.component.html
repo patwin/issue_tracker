@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card bg-dark my-5">
+          <div class="card-body">
+            <form [formGroup]="ticketForm" (ngSubmit)="submit()">
+                <div class="form-group row mb-2">
+                    <label for="title" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                        <input id="title" class="form-control" type="text" formControlName="title" required>
+                    </div>        
+                </div>
+                <div class="form-group row mb-2">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                        <textarea id="description" class="form-control" formControlName="description"></textarea>
+                    </div>        
+                </div>
+                <fieldset class="form-group mb-2">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Priority</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priority" id="low" value="LOW" formControlName="priority">
+                                <label class="form-check-label" for="low">LOW</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="priority" id="high" value="HIGH" formControlName="priority">
+                                <label class="form-check-label" for="high">HIGH</label>
+                            </div>
+                        </div>            
+                    </div>
+                </fieldset>
+                <div class="form-group row mb-2">
+                    <label for="type" class="col-sm-2 col-form-label">Type</label>
+                    <div class="col-sm-10">
+                        <select class="form-select mb-3 text-dark" id="type" formControlName="type">
+                            <option class="text-dark" value="FEATURE">Feature</option>
+                            <option class="text-dark" value="BUG">Bug</option>
+                            <option class="text-dark" value="DOCUMENTATION">Documentation</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <button type="submit" class="btn btn-primary mb-2">CREATE</button>
+                    <button type="button" (click)="cancel()" class="btn btn-danger">CANCEL</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

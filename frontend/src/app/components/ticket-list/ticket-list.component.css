@@ -1,0 +1,16 @@
+.badge {
+    border: 1px solid;
+    border-color: var(--clr-light-shades);
+}
+
+.badge-danger {
+    background-color: red;
+}
+
+.info, .delete {
+    margin-left: 2px;
+}
+
+.card {
+    background-color: var(--clr-dark-shades);
+}

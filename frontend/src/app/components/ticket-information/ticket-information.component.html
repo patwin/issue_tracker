@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card bg-dark my-5">
+            <div class="card-header">
+                <h3>Ticket information</h3>
+            </div>
+          <div class="card-body">
+            <form [formGroup]="ticketForm" (ngSubmit)="submit()" >
+                <div class="form-group row mb-2">
+                    <label for="title" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                        <input id="title" class="form-control" type="text" formControlName="title" required >
+                    </div>        
+                </div>
+                <div class="form-group row mb-2">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                        <textarea id="description" class="form-control" formControlName="description"></textarea>
+                    </div>        
+                </div>
+                <div class="form-group row mb-2">
+                    <label for="priority" class="col-sm-2 col-form-label">Priority</label>
+                    <div class="col-sm-10">
+                        <select class="form-select mb-3 text-dark" id="priority" formControlName="priority">
+                            <option class="text-dark" value="LOW">LOW</option>
+                            <option class="text-dark" value="HIGH">HIGH</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label for="type" class="col-sm-2 col-form-label">Type</label>
+                    <div class="col-sm-10">
+                        <select class="form-select mb-3 text-dark" id="type" formControlName="type">
+                            <option class="text-dark" value="FEATURE">Feature</option>
+                            <option class="text-dark" value="BUG">Bug</option>
+                            <option class="text-dark" value="DOCUMENTATION">Documentation</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <button type="submit" class="btn btn-primary mb-2">SAVE</button>
+                    <button type="button" (click)="cancel()" class="btn btn-danger">CANCEL</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
